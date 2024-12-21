@@ -97,61 +97,111 @@ sudo dpkg -P google-chrome-stable
 ---
 5. Выложить историю команд в терминале ubuntu
 
-> 364  cat Pets
-  365  cat >Pets
-  366  cat >PackAnimals
-  367  cat Pets, PackAnimals
-  368  cat Pets PackAnimals
-  369  cat Pets
-  370  cat PackAnimals
-  371  cat Pets; cat PackAnimals
-  372  cat Pets PackAnimals >HumanFriends
-  373  cat HumanFriends
-  374  mkdir Animals
-  375  pwd HumanFriends
-  376  cd Animals
-  377  robocopy
-  378  cp -r /home/loona/HumanFriends /home/loona/Animals
-  379  cat Animals
-  380  ls
-  381  cd HumanFriends
-  382  ls
-  383  ld -d
-  384  -ls a
-  385  -ls
-  386  ls -al
-  387  deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0
-  388  sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
-  389  sudo apt install mysql-server
-  390  sudo apt install ./google-chrome-stable_current_amd64.deb
-  391  sudo apt search ./google-chrome-stable_current_amd64.deb
-  392  sudo apt install ./google-chrome-stable_current_amd64.deb
-  393  wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  394  sudo apt install ./google-chrome-stable_current_amd64.deb
-  395  sudo dpkg -i ./google-chrome-stable_current_amd64.deb
-  396  sudo dpkg -r ./google-chrome-stable_current_amd64.deb
-  397  ls
-  398  sudo dpkg -r google-chrome-stable_current_amd64.deb
-  399  upt update
-  400  dpkg -list
-  401  dpkg --help
-  402  apt update
-  403  sudo apt update
-  404  sudo dpkg -r stable/main amd64 Packages
-  405  sudo dpkg -r ./google-chrome-stable_current_amd64.deb
-  406  sudo dpkg -r google-chrome-stable_current_amd64.deb
-  407  sudo dpkg -r google-chrome-stable
-  408  sudo dpkg -purge google-chrome-stable
-  409  dpkg -P google-chrome-stable
-  410  sudo dpkg -P google-chrome-stable
-  411  --force-remove-reinstreq: sudo dpkg --remove --force-remove-reinstreq google-chrome-stable
-  412  sudo --force-remove-reinstreq: sudo dpkg --remove --force-remove-reinstreq google-chrome-stable
-  413  sudo dpkg –purge  google-chrome-stable
-  414  sudo dpkg –purge -r google-chrome-stable
-  415  sudo dpkg -P  google-chrome-stable
-  416  cat ~/.bash_history
-  417  less ~/.bash_history
-  418  ...any other pager or output command...
+> 364 cat Pets
+
+365 cat >Pets
+
+366 cat >PackAnimals
+
+367 cat Pets, PackAnimals
+
+368 cat Pets PackAnimals
+
+369 cat Pets
+
+370 cat PackAnimals
+
+371 cat Pets; cat PackAnimals
+
+372 cat Pets PackAnimals >HumanFriends
+
+373 cat HumanFriends
+
+374 mkdir Animals
+
+375 pwd HumanFriends
+
+376 cd Animals
+
+377 robocopy
+
+378 cp -r /home/loona/HumanFriends /home/loona/Animals
+
+379 cat Animals
+
+380 ls
+
+381 cd HumanFriends
+
+382 ls
+
+383 ld -d
+
+384 -ls a
+
+385 -ls
+
+386 ls -al
+
+387 deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0
+
+388 sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+
+389 sudo apt install mysql-server
+
+390 sudo apt install ./google-chrome-stable_current_amd64.deb
+
+391 sudo apt search ./google-chrome-stable_current_amd64.deb
+
+392 sudo apt install ./google-chrome-stable_current_amd64.deb
+
+393 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+394 sudo apt install ./google-chrome-stable_current_amd64.deb
+
+395 sudo dpkg -i ./google-chrome-stable_current_amd64.deb
+
+396 sudo dpkg -r ./google-chrome-stable_current_amd64.deb 397 ls 398 sudo dpkg -r google-chrome-stable_current_amd64.deb
+
+399 upt update
+
+400 dpkg -list
+
+401 dpkg --help
+
+402 apt update
+
+403 sudo apt update
+
+404 sudo dpkg -r stable/main amd64 Packages
+
+405 sudo dpkg -r ./google-chrome-stable_current_amd64.deb
+
+406 sudo dpkg -r google-chrome-stable_current_amd64.deb
+
+407 sudo dpkg -r google-chrome-stable
+
+408 sudo dpkg -purge google-chrome-stable
+
+409 dpkg -P google-chrome-stable
+
+410 sudo dpkg -P google-chrome-stable
+
+411 --force-remove-reinstreq: sudo dpkg --remove --force-remove-reinstreq google-chrome-stable
+
+412 sudo --force-remove-reinstreq: sudo dpkg --remove --force-remove-reinstreq google-chrome-stable
+
+413 sudo dpkg –purge google-chrome-stable
+
+414 sudo dpkg –purge -r google-chrome-stable
+
+415 sudo dpkg -P google-chrome-stable
+
+416 cat ~/.bash_history
+
+417 less ~/.bash_history
+
+418 ...any other pager or output command...
 
 
   ---
