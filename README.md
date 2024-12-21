@@ -97,7 +97,7 @@ sudo dpkg -P google-chrome-stable
 ---
 5. Выложить историю команд в терминале ubuntu
 
- *** 364  cat Pets
+> 364  cat Pets
   365  cat >Pets
   366  cat >PackAnimals
   367  cat Pets, PackAnimals
@@ -151,7 +151,7 @@ sudo dpkg -P google-chrome-stable
   415  sudo dpkg -P  google-chrome-stable
   416  cat ~/.bash_history
   417  less ~/.bash_history
-  418  ...any other pager or output command...***
+  418  ...any other pager or output command...
 
 
   ---
