@@ -224,11 +224,58 @@ sudo dpkg -P google-chrome-stable
 
  ![image](https://github.com/user-attachments/assets/c3c9c74a-66bc-42eb-bc7c-dcfbbaf6ec97)
 
+ ![image](https://github.com/user-attachments/assets/5ee00dea-e9d3-4071-a89f-f4c33026c827)
+
+
  ---
  8. Создать таблицы с иерархией из диаграммы в БД
 
+```
+CREATE TABLE Commands
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name varchar(30),
+    description varchar(255)
+);
 
 
+CREATE TABLE AnimalGroup
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name varchar(30)
+);
+
+CREATE TABLE AnimalGenius
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name varchar(30),
+    group_id INT,
+    FOREIGN KEY (group_id) REFERENCES AnimalGroup (id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE KennelAnimal
+(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name varchar(30),
+    birthDate DATE,
+    genius_id INT,
+    FOREIGN KEY (genius_id) REFERENCES AnimalGenius (id)
+    ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE AnimalCommands
+(
+    animal_id INT NOT NULL,
+    command_id INT NOT NULL,
+
+    PRIMARY KEY (animal_id, command_id),
+    FOREIGN KEY (animal_id) REFERENCES KennelAnimal (id)
+     ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (command_id) REFERENCES Commands (id)
+     ON DELETE CASCADE  ON UPDATE CASCADE
+);
+```
 
 
 
