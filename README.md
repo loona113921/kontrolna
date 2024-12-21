@@ -97,7 +97,8 @@ sudo dpkg -P google-chrome-stable
 ---
 5. Выложить историю команд в терминале ubuntu
 
-> 364 cat Pets
+```
+364 cat Pets
 
 365 cat >Pets
 
@@ -202,7 +203,7 @@ sudo dpkg -P google-chrome-stable
 417 less ~/.bash_history
 
 418 ...any other pager or output command...
-
+```
 
   ---
   6.  Нарисовать диаграмму, в которой есть класс родительский класс, домашние
