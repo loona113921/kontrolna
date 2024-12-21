@@ -218,7 +218,9 @@ sudo dpkg -P google-chrome-stable
 7. В подключенном MySQL репозитории создать базу данных “Друзья
 человека”
 
+```
  CREATE DATABASE HumanFriend;
+```
 
  ![image](https://github.com/user-attachments/assets/c3c9c74a-66bc-42eb-bc7c-dcfbbaf6ec97)
 
