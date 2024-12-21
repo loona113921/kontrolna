@@ -45,4 +45,30 @@ donkeys
 ![image](https://github.com/user-attachments/assets/6578be64-ac4b-4415-a05b-fd8c3cb6fd16)
 
 ----
-2. **Создать директорию, переместить файл туда.**
+2. Создать директорию, переместить файл туда.
+
+```
+   mkdir Animals
+
+cp -r /home/loona/HumanFriends /home/loona/Animals
+```
+
+----
+3.  Подключить дополнительный репозиторий MySQL. Установить любой пакет
+из этого репозитория.
+
+*добавила репозиторий MySQL*
+
+```
+sudo add-apt-repository 'deb http://repo.mysql.com/apt/ubuntu/ bionic mysql-8.0'
+```
+
+*установила пакет из нового репозитория*
+```
+sudo apt install mysql-server
+```
+
+---
+4.  Установить и удалить deb-пакет с помощью dpkg.
+
+
