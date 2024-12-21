@@ -12,8 +12,7 @@
 cat Pets
 cats
 dogs
-hamsrersl>
-
+hamsrersl
 ```
 
 ---
