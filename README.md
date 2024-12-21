@@ -214,6 +214,16 @@ sudo dpkg -P google-chrome-stable
 ![image](https://github.com/user-attachments/assets/4afa3349-30e8-47de-b7d7-0c298effa024)
 
 
+---
+7. В подключенном MySQL репозитории создать базу данных “Друзья
+человека”
+
+ CREATE DATABASE HumanFriend;
+
+ ![image](https://github.com/user-attachments/assets/c3c9c74a-66bc-42eb-bc7c-dcfbbaf6ec97)
+
+ ---
+ 8. Создать таблицы с иерархией из диаграммы в БД
 
 
 
