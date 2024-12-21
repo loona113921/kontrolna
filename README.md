@@ -211,6 +211,7 @@ sudo dpkg -P google-chrome-stable
 животных войдут классы: собаки, кошки, хомяки, а в класс вьючные животные
 войдут: Лошади, верблюды и ослы).
 
+![image](https://github.com/user-attachments/assets/4afa3349-30e8-47de-b7d7-0c298effa024)
 
 
 
