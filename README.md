@@ -276,21 +276,93 @@ CREATE TABLE AnimalCommands
      ON DELETE CASCADE  ON UPDATE CASCADE
 );
 ```
+---
+9. Заполнить низкоуровневые таблицы именами(животных), командами
+которые они выполняют и датами рождения
 
 
+```
+ USE HumanFriends;
+
+INSERT INTO commands(name)
+VALUES
+ ('Принести тапки'),
+ ('Вертеться в колесе'),
+ ('Галоп!'),
+ ('Поклон!'),
+ ('КАШ!');
+
+INSERT INTO AnimalGroup (name)
+VALUES
+ ('Вьючные животные'),
+ ('Домашние животные');
+
+INSERT INTO AnimalGenius (name, group_id)
+VALUES
+ ('Лошадь', 1),
+ ('Верблюд', 1),
+ ('Осел', 1),
+ ('Кошка', 2),
+ ('Собака', 2),
+ ('Хомяк', 2);
+
+INSERT INTO KennelAnimal (name, birthDate, genius_id)
+VALUES
+ ('Гнедой', '2021-02-04', 1),
+ ('Гнедой_2', '2022-12-01', 1),
+ ('Тупица', '2020-08-24', 3),
+ ('Рыжий', '2022-05-20', 2),
+ ('Песик', '2023-01-24', 5),
+ ('Хомяк', '2022-12-20', 6),
+ ('Эльза', '2022-07-12', 4);
+
+INSERT INTO AnimalCommands (animal_id, command_id)
+VALUES
+ (1, 3), (2, 3), (2, 4), (3, 4),
+ (4, 5), (5, 1), (5, 4), (6, 2),
+ (7, 1);
+```
+
+---
+10.  Удалив из таблицы верблюдов, т.к. верблюдов решили перевезти в другой
+питомник на зимовку. Объединить таблицы лошади, и ослы в одну таблицу.
 
 
+```
+   USE HumanFriends;
+   DELETE FROM KennelAnimal WHERE genius_id = 2;
 
+   CREATE TABLE HorseAndDonkey AS
+   SELECT * from KennelAnimal WHERE genius_id = 1
+   UNION
+   SELECT * from KennelAnimal WHERE genius_id = 3;
 
+```
 
+---
+11. Создать новую таблицу “молодые животные” в которую попадут все
+животные старше 1 года, но младше 3 лет и в отдельном столбце с точностью
+до месяца подсчитать возраст животных в новой таблице
 
+```
+   CREATE TABLE YoungAnimals AS
+      SELECT id, name, birthDate, 
+      datediff(curdate(),birthDate) DIV 31 as age, genius_id 
+      from KennelAnimal 
+      WHERE date_add(birthDate, INTERVAL 1 YEAR) < curdate() 
+            AND date_add(birthDate, INTERVAL 3 YEAR) > curdate();
 
+```
 
+---
+12. Объединить все таблицы в одну, при этом сохраняя поля, указывающие на
+прошлую принадлежность к старым таблицам.
 
-
-
-
-
+```
+   SELECT id, name, birthDate, genius_id FROM HorseDonkey
+   UNION
+   SELECT id, name, birthDate, genius_id FROM YoungAnimals;
+```
 
 
 
